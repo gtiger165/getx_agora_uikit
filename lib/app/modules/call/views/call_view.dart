@@ -8,16 +8,10 @@ class CallView extends GetView<CallController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('CallView'),
-        centerTitle: true,
-      ),
-      body: Center(
-        child: Text(
-          'CallView is working',
-          style: TextStyle(fontSize: 20),
+        appBar: AppBar(
+          title: Text('CallView'),
+          centerTitle: true,
         ),
-      ),
-    );
+        body: Container());
   }
 }

@@ -11,6 +11,7 @@ dependencies:
   agora_uikit: 0.0.4
   flutter:
     sdk: flutter
+  agora_rtc_engine: ^4.2.2
 
 dev_dependencies:
   flutter_lints: ^1.0.0
