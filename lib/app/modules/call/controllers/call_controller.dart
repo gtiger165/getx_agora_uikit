@@ -1,20 +1,9 @@
 import 'package:get/get.dart';
+import 'package:getx_agora_uikit/app/modules/home/bindings/home_binding.dart';
+import 'package:getx_agora_uikit/app/modules/home/views/home_view.dart';
 
 class CallController extends GetxController {
-  //TODO: Implement CallController
-
-  final count = 0.obs;
-  @override
-  void onInit() {
-    super.onInit();
+  void toVcallPage() {
+    Get.to(() => HomeView(), binding: HomeBinding());
   }
-
-  @override
-  void onReady() {
-    super.onReady();
-  }
-
-  @override
-  void onClose() {}
-  void increment() => count.value++;
 }

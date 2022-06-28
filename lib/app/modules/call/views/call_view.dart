@@ -8,10 +8,16 @@ class CallView extends GetView<CallController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: Text('CallView'),
-          centerTitle: true,
+      appBar: AppBar(
+        title: Text('CallView'),
+        centerTitle: true,
+      ),
+      body: Center(
+        child: ElevatedButton(
+          onPressed: controller.toVcallPage,
+          child: Text("To VCall Page"),
         ),
-        body: Container());
+      ),
+    );
   }
 }

@@ -17,6 +17,30 @@ class HomeView extends GetView<HomeController> {
         child: Stack(children: [
           AgoraVideoViewer(client: controller.agoraClient.client),
           Align(
+            alignment: Alignment.topCenter,
+            child: TweenAnimationBuilder<Duration>(
+              duration: Duration(seconds: 1800),
+              tween: Tween(begin: Duration(seconds: 1800), end: Duration.zero),
+              onEnd: () {},
+              builder: (BuildContext context, Duration value, Widget? child) {
+                final minutes = value.inMinutes;
+                final seconds = value.inSeconds % 60;
+                return Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 2),
+                  child: Text(
+                    '$minutes:$seconds',
+                    textAlign: TextAlign.center,
+                    style: const TextStyle(
+                      color: Color(0xFFDE1B1B),
+                      fontWeight: FontWeight.bold,
+                      fontSize: 14,
+                    ),
+                  ),
+                );
+              },
+            ),
+          ),
+          Align(
             alignment: Alignment.bottomCenter,
             child: Container(
               padding: EdgeInsets.symmetric(vertical: 8.0),
